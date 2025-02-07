@@ -6,7 +6,6 @@ public class UrlConstants {
 
     public static final String REGISTER_USER = "/api/auth/register";
     public static final String LOGIN_USER = "/api/auth/login";
-    public static final String LOGOUT_USER  = "/api/auth/logout";
 
     public static final String CRUD_USER = "/api/auth/user";
 
