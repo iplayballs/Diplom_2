@@ -1,11 +1,10 @@
 package requests;
 
 import data.OrderData;
-import data.OrderDataIngredients;
 import data.UserData;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.junit.BeforeClass;
+
 
 import static config.UrlConstants.CREATE_ORDER;
 import static config.UrlConstants.GET_USER_ORDERS;

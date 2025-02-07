@@ -1,7 +1,6 @@
 package data;
 
 import io.restassured.response.Response;
-import org.apache.commons.lang3.RandomStringUtils;
 import requests.RestApiBuilder;
 
 import java.util.*;
@@ -28,8 +27,7 @@ public class OrderDataIngredients extends RestApiBuilder {
         //создаем массив всех объектов ответа
         List<Map<String, Object>> dataList = response.jsonPath().getList("data");
 
-        for (int i = 0; i < dataList.size(); i++) {
-            Map<String, Object> item = dataList.get(i);
+        for (Map<String, Object> item : dataList) {
             //формируем массивы каждого по типу ингридиентов
             if (item.toString().toLowerCase().contains("булка")) {
                 ban.put((String) item.get("_id"), (String) item.get("name"));
@@ -67,9 +65,7 @@ public class OrderDataIngredients extends RestApiBuilder {
 
         List<String> idIngredientsName = new ArrayList<>();
 
-        for (int i = 0; i < idIngredients.size(); i++) {
-
-            String ingredientId = idIngredients.get(i);
+        for (String ingredientId : idIngredients) {
 
             if (ban.containsKey(ingredientId)) {
                 idIngredientsName.add(ban.get(ingredientId));

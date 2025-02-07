@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 public class UserApi extends RestApiBuilder {
 
     Response response;
-    UserData userData;
+
     private final RestApiBuilder restApiBuilder = new RestApiBuilder();
 
     @Step("Регистрация нового пользователя в системе")
@@ -39,18 +39,6 @@ public class UserApi extends RestApiBuilder {
 
         userData.setAccessToken(response.jsonPath().getString("accessToken"));
         userData.setRefreshToken(response.jsonPath().getString("refreshToken"));
-
-        return response;
-    }
-
-    @Step("Выход пользователя из системы")
-    public Response logoutUser(UserData refreshToken){
-
-        response =
-                given()
-                        .spec(restApiBuilder.requestSpecificationWithoutAccessToken())
-                        .body(refreshToken)
-                        .post(LOGOUT_USER);
 
         return response;
     }
