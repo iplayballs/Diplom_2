@@ -22,7 +22,6 @@ public class CreateUserTests extends BaseTestAfterDeleteUser {
     public void testCreateUserWithRequiredFields(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());

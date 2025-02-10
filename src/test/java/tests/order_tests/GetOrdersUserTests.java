@@ -36,8 +36,6 @@ public class GetOrdersUserTests extends BaseTestAfterDeleteUser {
     public void testGetOrderListWithAccessToken() {
 
         userData = new UserData();
-        userApi = new UserApi();
-        OrderApi orderApi = new OrderApi();
         OrderData orderData = new OrderData();
 
         userData.setName(UserDataGenerate.generateName());
@@ -62,8 +60,6 @@ public class GetOrdersUserTests extends BaseTestAfterDeleteUser {
     @Description("Проверяем код ответа создания заказа 401 и содержание body ответа \"message\": \"You should be authorised\"")
     @Test
     public void testGetOrderListWithoutAccessToken() {
-
-        OrderApi orderApi = new OrderApi();
 
         Response response = orderApi.getOrderListWithoutAccessToken();
 

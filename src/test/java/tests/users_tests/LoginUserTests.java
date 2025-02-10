@@ -22,7 +22,6 @@ public class LoginUserTests extends BaseTestAfterDeleteUser {
     public void testLoginUserInSystem(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());
@@ -42,7 +41,6 @@ public class LoginUserTests extends BaseTestAfterDeleteUser {
     public void testLoginUserWithWrongEmail(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());
@@ -65,7 +63,6 @@ public class LoginUserTests extends BaseTestAfterDeleteUser {
     public void testLoginUserWithWrongPassword(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());

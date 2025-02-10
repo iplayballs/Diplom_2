@@ -23,7 +23,6 @@ public class EditUserTests extends BaseTestAfterDeleteUser {
     public void testEditNameUserExistWithRightAccessToken(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());
@@ -44,7 +43,6 @@ public class EditUserTests extends BaseTestAfterDeleteUser {
     public void testEditEmailUserExistWithRightAccessToken(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());
@@ -65,7 +63,6 @@ public class EditUserTests extends BaseTestAfterDeleteUser {
     public void testEditNameUserExistWithoutAccessToken(){
 
         userData = new UserData();
-        userApi = new UserApi();
 
         userData.setName(UserDataGenerate.generateName());
         userData.setEmail(UserDataGenerate.generateEmail());
